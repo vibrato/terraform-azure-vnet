@@ -1,4 +1,3 @@
-
 # create a vnet
 # (VPC for those who speak AWS)
 resource "azurerm_virtual_network" "network" {

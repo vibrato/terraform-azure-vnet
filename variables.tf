@@ -21,11 +21,13 @@ variable "tenant_id" {
 variable "stack_name" {
   type        = "string"
   description = ""
+  default     = "vnetdemo"
 }
 
 variable "azure_location" {
   type        = "string"
   description = ""
+  default     = "australiasoutheast"
 }
 
 variable "environment" {
@@ -37,7 +39,6 @@ variable "vnet_cidr" {
   type    = "string"
   default = "10.0.0.0/16"
 }
-
 
 # List of the subnets we are going to create
 # CIDR will be calculated from the VNet CIDR
