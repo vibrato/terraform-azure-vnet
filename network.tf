@@ -1,3 +1,6 @@
+
+# create a vnet
+# (VPC for those who speak AWS)
 resource "azurerm_virtual_network" "network" {
   name                = "${var.stack_name}_network"
   address_space       = ["${var.vnet_cidr}"]
@@ -10,6 +13,9 @@ resource "azurerm_virtual_network" "network" {
   }
 }
 
+# for each record in var.subnets
+# create a subnet
+# calculate the cidr from the base vnet subnet
 resource "azurerm_subnet" "subnets" {
   count = "${length(var.subnets)}"
 

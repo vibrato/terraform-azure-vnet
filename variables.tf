@@ -38,6 +38,9 @@ variable "vnet_cidr" {
   default = "10.0.0.0/16"
 }
 
+
+# List of the subnets we are going to create
+# CIDR will be calculated from the VNet CIDR
 variable "subnets" {
   type = "list"
 
